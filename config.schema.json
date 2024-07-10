@@ -41,6 +41,15 @@
           "apiKey": {
               "title": "API Key",
               "type": "string"
+            },
+            "username": {
+                "title": "Username",
+                "type": "string",
+            },
+            "password": {
+                "title": "Password",
+                "type": "string",
+                "format": "password"
             }
     }
   },
@@ -102,6 +111,24 @@
         }
       ]
     },
+    {
+        "type": "fieldset",
+        "title": "Google Account - Password",
+        "description": "Expand when using the password signin method for a Google Account",
+        "expandable": true,
+        "displayFlex": true,
+        "items": [
+          {
+              "type": "flex",
+              "flex-flow": "row wrap",
+              "items": [
+                "googleAuth.username",
+
+                "googleAuth.password"
+              ]
+          }
+        ]
+      },
     {
       "type": "fieldset",
       "title": "Google Account - Refresh Token",

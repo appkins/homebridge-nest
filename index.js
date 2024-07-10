@@ -146,8 +146,8 @@ class NestPlatform {
             throw('You have specified both googleAuth and refreshToken in config.json. Please pick the one you want to use, and remove the other one');
         }
 
-        if (this.config.googleAuth && (!this.config.googleAuth.issueToken || !this.config.googleAuth.cookies)) { // || !this.config.googleAuth.apiKey)) {
-            throw('When using googleAuth, you must provide issueToken and cookies in config.json. Please see README.md for instructions');
+        if (this.config.googleAuth && ((!this.config.googleAuth.issueToken || !this.config.googleAuth.cookies) && !this.config.googleAuth.password)) { // || !this.config.googleAuth.apiKey)) {
+            throw('When using googleAuth, you must provide issueToken and cookies or a username and password in config.json. Please see README.md for instructions');
         }
 
         const conn = new NestConnection(this.config, this.log, verbose, fieldTestMode);
