@@ -44,12 +44,11 @@
             },
             "username": {
                 "title": "Username",
-                "type": "string",
+                "type": "string"
             },
             "password": {
                 "title": "Password",
-                "type": "string",
-                "format": "password"
+                "type": "string"
             }
     }
   },
@@ -123,7 +122,6 @@
               "flex-flow": "row wrap",
               "items": [
                 "googleAuth.username",
-
                 "googleAuth.password"
               ]
           }
